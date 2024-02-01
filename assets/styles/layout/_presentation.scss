@@ -1,0 +1,44 @@
+@use '../abstracts/mixin' as m;
+@use '../abstracts/variables' as *;
+
+.presentation {
+    background-color: rgba(map-get($map: $colors, $key: 'info'), 0.2);
+    @include m.dflex($direction: row, $justify: center, $align: center);
+
+    .container {
+        @include m.dflex($direction: row, $justify: start, $align: start);
+        padding-block: 15vh;
+    }
+
+    .section-title {
+        width: 50%;
+        h3 {
+            width: 85%;
+        }
+    }
+
+    .info {
+        width: 50%;
+    }
+
+    .stats {
+        margin-top: 6vh;
+        @include m.dflex($direction: row, $justify: space-between, $align: start);
+
+        &__item {
+            @include m.dflex($direction: row, $justify: start, $align: end);
+            width: 20%;
+            hr {
+                width: 5px;
+                height: 9vh;
+                border: none;
+                background-color: map-get($map: $colors, $key: 'info');
+                margin-right: 2vh;
+            }
+            h4 {
+                margin-bottom: 1vh;
+            }
+        }
+
+    }
+}

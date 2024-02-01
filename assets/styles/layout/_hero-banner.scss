@@ -1,0 +1,13 @@
+@use '../abstracts/mixin' as m;
+
+.hero-banner {
+    margin-bottom: 55vh;
+    .info {
+        p {
+            margin-top: 2vh;
+            margin-bottom: 6vh;
+            width: 22%;
+        }
+    }
+
+}

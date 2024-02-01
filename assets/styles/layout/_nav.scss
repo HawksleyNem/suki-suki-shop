@@ -1,0 +1,19 @@
+@use '../abstracts/mixin' as m;
+
+nav {
+    width: 100%;
+    height: 12vh;
+    @include m.dflex($direction: row, $justify: space-between, $align: center);
+
+}
+
+.nav-left, .nav-right {
+    @include m.dflex($direction: row, $justify: start, $align: start);
+    li + li {
+        margin-left: 4vh;
+    }
+}
+
+.logo {
+    max-width: 8vh;
+}

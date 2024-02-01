@@ -2,7 +2,7 @@
 <html>
     <head>
         <meta charset="UTF-8">
-        <title>{% block title %}Welcome!{% endblock %}</title>
+        <title>{% block title %}SSShop | {% endblock %}</title>
         <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 128 128%22><text y=%221.2em%22 font-size=%2296%22>⚫️</text><text y=%221.3em%22 x=%220.2em%22 font-size=%2276%22 fill=%22%23fff%22>sf</text></svg>">
         {% block stylesheets %}
         {% endblock %}
@@ -12,6 +12,60 @@
         {% endblock %}
     </head>
     <body>
+        <header class="container">
+            <nav>
+                <ul class="nav-left"><a href=""><img src={{ asset("/images/SSShopLogo.png") }} alt="Logo" class="logo"></a></ul>
+                <ul class="nav-right">
+                    <li><a href="{{ path("app_home") }}">Accueil</a></li>
+                    <li><a href="{{ path("app_service") }}">Services</a></li>
+                    <li><a href="{{ path("app_about") }}">À propos</a></li>
+                    <li><a href="{{ path("app_contact") }}" class="btn btn-primary">Nous contacter</a></li>
+                </ul>
+            </nav>
+        </header>
+
         {% block body %}{% endblock %}
+
+        <footer>
+            <div class="container footer-content">
+                <div div class="main-div">
+                    <a href=""><img src={{ asset("/images/SSShopLogo.png") }} alt="Logo" class="logo"></a>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam porro recusandae nostrum voluptatem minima nulla, et debitis rem temporibus quibusdam ipsa. Natus dignissimos doloremque soluta dolore temporibus accusantium libero veritatis.</p>
+                </div>
+
+                <div class="div">
+                    <h5>Liens importants</h5>
+                    <p>Accueil</p>
+                    <p>Service</p>
+                    <p>À propos</p>
+                    <p>Nous contacter</p>
+                </div>
+
+                <div class="div">
+                    <h5>Services</h5>
+                    <p>Création sur-mesure</p>
+                    <p>Vente</p>
+                    <p>Publicité</p>
+                </div>
+
+                <div class="social-div">
+                    <h5>Nous contacter</h5>
+                    <div class="social-div__item">
+                        <img src="/images/location-svgrepo-com 1.png" alt="Localisation" class="icon">
+                        <p>70 rue des Jacobins, Amiens 80800</p>
+                    </div>
+                    <div class="social-div__item">
+                        <img src="/images/phone-svgrepo-com 1.png" alt="Téléphone" class="icon">
+                        <p>03 22 77 77 77</p>
+                    </div>
+                    <div class="social-div__item">
+                        <a href=""><img src="" alt=""></a>
+                        <a href=""><img src="" alt=""></a>
+                        <a href=""><img src="" alt=""></a>
+                        <a href=""><img src="" alt=""></a>
+                    </div>
+                </div>
+            </div>
+        </footer>
     </body>
 </html>

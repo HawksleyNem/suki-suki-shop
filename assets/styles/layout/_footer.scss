@@ -1,0 +1,50 @@
+@use '../abstracts/variables' as *;
+@use '../abstracts/mixin' as m;
+
+footer {
+    background-color: map-get($map: $colors, $key: 'primary');
+    @include m.dflex($direction: row, $justify: center, $align: start);
+    padding-block: 6rem;
+
+    .logo {
+        min-width: 12vh;
+    }
+
+    p {
+        color: white;
+        font-family: 'Roboto Light';
+    }
+
+    .footer-content {
+        @include m.dflex($direction: row, $justify: space-between, $align: start);
+
+        .main-div, .social-div {
+            width: 25%;
+        }
+
+        .main-div {
+            p {
+                font-size: 1rem;
+            }
+        }
+
+        .social-div {
+            &__item {
+                @include m.dflex($direction: row, $justify: start, $align: center);
+                margin-bottom: 2vh;
+                .icon {
+                    height: 3vh;
+                    margin-right: 1.5vh;
+                }
+            }
+        }
+
+        .div {
+            width: 15%;
+
+            &__item {
+                @include m.dflex($direction: row, $justify: start, $align: start);
+            }
+        }
+    }
+}

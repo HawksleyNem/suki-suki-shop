@@ -1,0 +1,18 @@
+@use '../abstracts/variables' as *;
+@use '../abstracts/mixin' as m;
+@use '../abstracts/placeholders';
+
+.about {
+
+    .section-title {
+        text-align: center;
+    }
+
+    .presentation {
+        .container {
+            .section-title {
+                text-align: start;
+            }
+        }
+    }
+}

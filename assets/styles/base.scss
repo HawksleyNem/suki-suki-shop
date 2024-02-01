@@ -1,0 +1,109 @@
+@use './abstracts/variables' as *;
+@use './abstracts/mixin' as m;
+
+@font-face {
+    font-family: 'Roboto Thin';
+    src: url("/fonts/Roboto-Thin.ttf");
+}
+
+@font-face {
+    font-family: 'Roboto Light';
+    src: url("/fonts/Roboto-Light.ttf");
+}
+
+@font-face {
+    font-family: 'Roboto Regular';
+    src: url("/fonts/Roboto-Regular.ttf");
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+    box-sizing: border-box;
+    font-family: 'Roboto Regular';
+    font-weight: 100;
+}
+
+body {
+    width: 100%;
+    @include m.dflex($direction: column, $justify: start, $align: center)
+}
+
+header {
+    width: 100%;
+    margin-bottom: 10vh;
+}
+
+section {
+    margin-bottom: 15vh;
+}
+
+h1 {
+    font-family: 'Roboto Regular';
+    font-size: 3.5rem;
+    color: map-get($map: $colors, $key: 'primary');
+    width: 50%;
+}
+
+h2 {
+    font-family: 'Roboto Regular';
+    font-size: 1.2rem;
+    color: map-get($map: $colors, $key: 'info')
+}
+
+h3 {
+    font-family: 'Roboto Regular';
+    font-size: 3rem;
+    color: map-get($map: $colors, $key: 'primary')
+}
+
+h4 {
+    font-family: 'Roboto Regular';
+    font-size: 2rem;
+    color: map-get($map: $colors, $key: 'primary');
+}
+
+h5 {
+    font-family: 'Roboto Regular';
+    font-size: 1rem;
+    color: map-get($map: $colors, $key: 'white');
+    text-transform: uppercase;
+    margin-bottom: 3vh;
+}
+
+p, a {
+    font-family: 'Roboto Regular';
+    font-size: 1.2rem;
+    color: map-get($map: $colors, $key: 'gray');
+}
+
+p {
+    line-height: 3.5vh;
+}
+
+p + p {
+    margin-top: 2vh;
+}
+
+.section-title {
+    margin-bottom: 10vh;
+    h2 {
+        margin-bottom: 2vh;
+    }
+}
+
+.banner {
+    position: absolute;
+    right: 0;
+    top: 100vh - 80vh;
+    height: 80vh;
+    width: 55vw;
+    object-fit: cover;
+    border-radius: 40% 60% 51% 49% / 60% 0% 0% 40%;
+}
+
+.highlight {
+    color: map-get($map: $colors, $key: 'info');
+}

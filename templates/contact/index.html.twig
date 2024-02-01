@@ -1,0 +1,37 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}{{ parent() }} Contact{% endblock %}
+
+{% block body %}
+    <section class="contact container">
+        <div class="section-title">
+            <h2>Nous contacter</h2>
+            <h3>Restez en contact avec nous</h3>
+        </div>
+        <form class="contact-form">
+            <div class="item">
+                <input type="text" class="item__text" id="lastname" placeholder="Nom">
+            </div>
+            <div class="item">
+                <input type="text" class="item__text" id="firstname" placeholder="Prénom">
+            </div>
+            <div class="item">
+                <input type="email" class="item__text" id="email" aria-describedby="emailHelp" placeholder="Adresse mail">
+            </div>
+            <div class="item">
+                <input type="text" class="item__text" id="phone" placeholder="Téléphone">
+            </div>
+            <div class="item">
+                <input type="text" class="item__textarea" id="object" placeholder="Objet">
+            </div>
+            <div class="item">
+                <input type="text" class="item__textarea" id="message" placeholder="Message">
+            </div>
+            <div class="check">
+                <input type="checkbox" class="item__check" id="check">
+                <label class="info" for="check">En soumettant ce formulaire, j'accepte que les informations saisies dans ce formulaire soient utilisées, exploitées, traitées pour permettre de me recontacter, pour m'envoyer la newsletter, dans le cadre de la relation commerciale qui découle de cette prise de contact.</label>
+            </div>
+            <button type="submit" class="btn btn-primary">Envoyer</butFton>
+        </form>
+    </section>
+{% endblock %}

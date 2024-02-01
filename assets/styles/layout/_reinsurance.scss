@@ -1,0 +1,25 @@
+@use '../abstracts/mixin' as m;
+
+.reinsurance {
+    @include m.dflex($direction: column, $justify: start, $align: center);
+
+    .section-title {
+        @include m.dflex($direction: column, $justify: start, $align: center);
+    }
+
+    .reinsurance-list {
+        @include m.dflex($direction: row, $justify: space-between, $align: start)
+    }
+    &__card {
+        width: 35%;
+        p {
+            width: 85%;
+        }
+        h4 {
+            margin-block: 2.5vh;
+        }
+        img {
+            width: 6vh;
+        }
+    }
+}

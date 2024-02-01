@@ -1,0 +1,36 @@
+@use '../abstracts/mixin' as m;
+@use '../abstracts/variables' as *;
+
+.services {
+    @include m.dflex($direction: column, $justify: center, $align: center);
+
+    .section-title {
+        text-align: center;
+    }
+
+    .card {
+        @include m.dflex($direction: row, $justify: space-between, $align: center);
+
+        img {
+            width: 70vh;
+            height: 40vh;
+            border-radius: 10px;
+            object-fit: cover;
+        }
+        &__info {
+            @include m.dflex($direction: column, $justify: start, $align: start);
+
+            h4 {
+                margin-bottom: 3vh;
+            }
+        }
+
+        img + div, div + img {
+            margin-left: 10vh;
+        }
+    }
+
+    .card + .card {
+        margin-top: 15vh;
+    }
+}

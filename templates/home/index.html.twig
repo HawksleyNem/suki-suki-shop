@@ -1,0 +1,92 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}{{ parent() }} Accueil{% endblock %}
+
+
+{% block body %}
+    <img src="/images/kanagawa_wave.png" alt="Kawagawa Wave" class="banner">
+    <section class="hero-banner container">
+        <div class="info">
+            <h1>Nous avons décidé de créer<br>une <span class="highlight">nouvelle</span> manière<br>de rendre <span class="highlight">heureux</span></h1>
+            <p>Nous voulons rendre l'univers des mangas plus réaliste, en donnant vie à vos personnages préférés</p>
+            <a href="{{ path("app_contact") }}" class="btn btn-primary">Nous contacter</a>
+        </div>
+    </section>
+
+    <section class="reinsurance container">
+        <div class="section-title">
+            <h2>Quels sont nos services ?</h2>
+            <h3>Des solutions innovantes pour vos attentes</h3>
+        </div>
+        <div class="reinsurance-list">
+            <div class="reinsurance__card">
+                <img src="/images/palette-svgrepo-com 1.png" alt="Créations sur-mesure">
+                <h4>Créations sur-mesure</h4>
+                <p>Nous façonnons des solutions uniques et personnalisées, répondant à vos besoins spécifiques avec nos créations sur-mesure d'exception.</p>
+            </div>
+            <div class="reinsurance__card">
+                <img src="/images/shopping-bag-svgrepo-com 1.png" alt="Vente">
+                <h4>Vente</h4>
+                <p>Nous offrons une gamme variée de produits de haute qualité, alliant innovation et excellence, pour répondre à vos besoins avec notre service de vente spécialisé.</p>
+            </div>
+            <div class="reinsurance__card">
+                <img src="/images/cherry-blossom-6-svgrepo-com 1.png" alt="Expositions">
+                <h4>Expositions</h4>
+                <p>Nous mettons en lumière notre savoir-faire à travers des expositions captivantes, offrant une expérience immersive pour partager notre passion.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="presentation">
+        <div class="container">
+            <div class="section-title">
+                <h2>Qui sommes-nous ?</h2>
+                <h3>Des solutions innovantes pour une meilleure entente</h3>
+            </div>
+            <div class="info">
+                <p>À Suki Suki Shop, nous sommes fiers de vous présenter une collection exclusive
+                    de figurines, porte-clés et autres accessoires minutieusement sélectionnés,
+                    témoignant de notre passion inébranlable pour ces créations artistiques.
+                    En plus de notre gamme diversifiée de produits de haute qualité, nous excellons
+                    dans la création sur-mesure, transformant vos idées en objets tangibles qui reflètent
+                    votre amour pour les personnages et les histoires qui vous tiennent à cœur.
+                </p>
+                <p>L'innovation et la créativité sont au cœur de notre démarche.
+                    Nous sommes spécialisés dans la conception de produits uniques et personnalisés,
+                    permettant à nos clients de posséder des pièces exclusives qui capturent l'essence même
+                    de leurs préférences manga. En outre, nous ne nous contentons pas de vendre des produits,
+                    nous les mettons en scène à travers des expositions passionnantes. Nos expositions
+                    sont des voyages immersifs dans l'univers riche et coloré du manga, mettant en lumière
+                    notre dévouement à l'art et à la culture qui nous inspirent.
+                </p>
+                <p>Chez Suki Suki Shop, chaque produit raconte une histoire, et chaque exposition
+                    est une célébration de notre engagement envers la communauté manga et animé.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <section class="gallery container">
+        <div class="section-title">
+            <h2>Gallerie</h2>
+            <h3>Découvrez nos réalisations et nos expositions</h3>
+        </div>
+        <div class="gallery-content">
+            <div class="column">
+                <img src="/images/anime-figures.jpg" alt="Figurines anime">
+                <img src="/images/convention-1.jpg" alt="Convention">
+                <img src="/images/dbz-figures.jpg" alt="Figurines anime">
+            </div>
+            <div class="column">
+                <img src="/images/anime-plushes.jpg" alt="Peluches anime">
+                <img src="/images/dbz.jpg" alt="Figurine anime">
+                <img src="/images/exhibition-building.jpg" alt="Bâtiment d'exposition">
+            </div>
+            <div class="column">
+                <img src="/images/figure.jpg" alt="Figurine">
+                <img src="/images/figures-vitrine.jpg" alt="Vitrine de figurines">
+                <img src="/images/how-its-made.jpg" alt="Artisanat">
+            </div>
+        </div>
+    </section>
+{% endblock %}
