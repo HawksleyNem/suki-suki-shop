@@ -12,9 +12,9 @@
         {% endblock %}
     </head>
     <body>
-        <header class="container">
-            <nav>
-                <ul class="nav-left"><a href=""><img src={{ asset("/images/SSShopLogo.png") }} alt="Logo" class="logo"></a></ul>
+        <header>
+            <nav class="container">
+                <ul class="nav-left"><a href="{{ path("app_home") }}"><img src={{ asset("/images/SSShopLogo.png") }} alt="Logo" class="logo"></a></ul>
                 <ul class="nav-right">
                     <li><a href="{{ path("app_home") }}">Accueil</a></li>
                     <li><a href="{{ path("app_service") }}">Services</a></li>
@@ -24,7 +24,9 @@
             </nav>
         </header>
 
+        <main>
         {% block body %}{% endblock %}
+        </main>
 
         <footer>
             <div class="container footer-content">

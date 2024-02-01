@@ -1,2 +1,10 @@
 @use '../abstracts/variables' as *;
+@use '../abstracts/mixin' as m;
 
+header {
+    position: fixed;
+    background-color: map-get($map: $colors, $key: 'white');
+    z-index: 99;
+    @include m.dflex($direction: row, $justify: center, $align: start);
+    border-bottom: 1px solid rgba(map-get($map: $colors, $key: 'black'), 0.05);
+}
