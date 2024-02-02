@@ -12,11 +12,13 @@
         {% endblock %}
     </head>
     <body>
-        <header class="">
+        {# <header>
             <div class="close-burger">
                 <div class="close-burger__item"></div>
                 <div class="close-burger__item"></div>
-            </div>
+            </div> #}
+
+
             <div class="desktop-nav">
                 <nav class=" container">
                     <ul class="nav-left"><a href="{{ path("app_home") }}"><img src={{ asset("/images/SSShopLogo.png") }} alt="Logo" class="logo"></a></ul>
@@ -28,8 +30,9 @@
                     </ul>
                 </nav>
             </div>
+            
 
-            <div class="mobile-nav">
+            {# <div class="mobile-nav">
                 <nav class=" container">
                     <ul class="nav-left">
                         <div class="burger-menu">
@@ -51,7 +54,7 @@
                     <li><a href="{{ path("app_about") }}">À propos</a></li>
                     <li><a href="{{ path("app_contact") }}" class="btn btn-primary">Nous contacter</a></li>
                 </ul>
-            </div>
+            </div> #}
         </header>
 
         <main>
