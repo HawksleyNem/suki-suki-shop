@@ -1,0 +1,11 @@
+@use '../abstracts/variables' as *;
+@use '../abstracts/mixin' as m;
+@use '../abstracts/placeholders';
+
+.contact {
+    @include m.dflex($direction: column, $justify: start, $align: center);
+
+    .section-title {
+        text-align: center;
+    }
+}
