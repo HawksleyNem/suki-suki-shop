@@ -36,6 +36,7 @@ header {
             background-color: map-get($map: $colors, $key: 'white');
             border-bottom: 1px solid rgba(map-get($map: $colors, $key: 'black'), 0.1);
             @include m.dflex($direction: row, $justify: space-between, $align: start);
+            position: absolute;
 
             nav {
                 width: 100%;
