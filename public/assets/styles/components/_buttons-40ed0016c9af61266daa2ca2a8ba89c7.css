@@ -1,0 +1,17 @@
+@use '../abstracts/variables' as *;
+@use '../abstracts/mixin' as m;
+@use '../abstracts/placeholders';
+
+.btn {
+    padding-inline: 3vh;
+    padding-block: 1.5vh;
+    color: map-get($map: $colors, $key: 'white');
+    border-radius: 1000px;
+    border: none;
+    font-size: 1.2rem;
+    font-family: 'Roboto Regular';
+}
+
+.btn-primary {
+    background-color: map-get($map:$colors, $key: 'info');
+}
