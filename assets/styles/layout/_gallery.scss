@@ -21,4 +21,19 @@
             }
         }
     }
+
+
+    @media (max-width: 1024px) {
+        .gallery-content {
+            @include m.dflex($direction: column, $justify: start, $align: center);
+
+            .column {
+                width: 100%;
+            }
+
+            .column + .column {
+                margin-top: 3vh;
+            }
+        }
+    }
 }

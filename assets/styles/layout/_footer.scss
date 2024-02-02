@@ -7,12 +7,12 @@ footer {
     padding-block: 6rem;
 
     .logo {
-        min-width: 12vh;
+        min-width: 8vh;
+        margin-bottom: 2vh;
     }
 
-    p {
+    p, a {
         color: white;
-        font-family: 'Roboto Light';
     }
 
     .footer-content {
@@ -41,9 +41,42 @@ footer {
 
         .div {
             width: 15%;
+            @include m.dflex($direction: column, $justify: start, $align: start);
+
+            a + a {
+                margin-top: 3.5vh;
+            }
 
             &__item {
                 @include m.dflex($direction: row, $justify: start, $align: start);
+            }
+        }
+
+
+        @media (max-width: 1024px) {
+            @include m.dflex($direction: column, $justify: start, $align: center);
+
+            .main-div, .social-div, .div {
+                width: 100%;
+                @include m.dflex($direction: column, $justify: start, $align: center);
+                text-align: center;
+
+                a, h5, p {
+                    width: 100%;
+                    font-size: 1.5rem;
+                }
+
+                &__item {
+                    p {
+                        font-size: 1.8rem;
+                    }
+                }
+
+
+            }
+
+            .div + .div, .main-div + .div, .div + .social-div {
+                margin-top: 12vh;
             }
         }
     }

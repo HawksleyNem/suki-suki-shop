@@ -3,7 +3,7 @@
     <head>
         <meta charset="UTF-8">
         <title>{% block title %}SSShop | {% endblock %}</title>
-        <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 128 128%22><text y=%221.2em%22 font-size=%2296%22>⚫️</text><text y=%221.3em%22 x=%220.2em%22 font-size=%2276%22 fill=%22%23fff%22>sf</text></svg>">
+        <link rel="icon" href="/images/SSShopLogo.png">
         {% block stylesheets %}
         {% endblock %}
 
@@ -12,16 +12,46 @@
         {% endblock %}
     </head>
     <body>
-        <header>
-            <nav class="container">
-                <ul class="nav-left"><a href="{{ path("app_home") }}"><img src={{ asset("/images/SSShopLogo.png") }} alt="Logo" class="logo"></a></ul>
-                <ul class="nav-right">
+        <header class="">
+            <div class="close-burger">
+                <div class="close-burger__item"></div>
+                <div class="close-burger__item"></div>
+            </div>
+            <div class="desktop-nav">
+                <nav class=" container">
+                    <ul class="nav-left"><a href="{{ path("app_home") }}"><img src={{ asset("/images/SSShopLogo.png") }} alt="Logo" class="logo"></a></ul>
+                    <ul class="nav-right">
+                        <li><a href="{{ path("app_home") }}">Accueil</a></li>
+                        <li><a href="{{ path("app_service") }}">Services</a></li>
+                        <li><a href="{{ path("app_about") }}">À propos</a></li>
+                        <li><a href="{{ path("app_contact") }}" class="btn btn-primary">Nous contacter</a></li>
+                    </ul>
+                </nav>
+            </div>
+
+            <div class="mobile-nav">
+                <nav class=" container">
+                    <ul class="nav-left">
+                        <div class="burger-menu">
+                            <div class="burger-menu__item"></div>
+                            <div class="burger-menu__item mid"></div>
+                            <div class="burger-menu__item"></div>
+                        </div>
+                    </ul>
+                    <ul class="nav-right">
+                        <a href="{{ path("app_home") }}"><img src={{ asset("/images/SSShopLogo.png") }} alt="Logo" class="logo"></a>
+                    </ul>
+                </nav>
+
+            </div>
+            <div class="mobile-menu">
+                <ul>
                     <li><a href="{{ path("app_home") }}">Accueil</a></li>
                     <li><a href="{{ path("app_service") }}">Services</a></li>
                     <li><a href="{{ path("app_about") }}">À propos</a></li>
                     <li><a href="{{ path("app_contact") }}" class="btn btn-primary">Nous contacter</a></li>
                 </ul>
-            </nav>
+            </div>
         </header>
 
         <main>
@@ -32,22 +62,27 @@
             <div class="container footer-content">
                 <div div class="main-div">
                     <a href=""><img src={{ asset("/images/SSShopLogo.png") }} alt="Logo" class="logo"></a>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam porro recusandae nostrum voluptatem minima nulla, et debitis rem temporibus quibusdam ipsa. Natus dignissimos doloremque soluta dolore temporibus accusantium libero veritatis.</p>
+                    <p>
+                        Chez Suki Suki Shop, notre objectif principal est de vous offrir une qualité de produit inégalable
+                        ainsi que des moments inoubliables lors de nos expositions. Après avoir débuté en France
+                        et nous être implantés dans 8 autres pays, nous souhaitons continuer à grandir afin
+                        de pouvoir répondre aux besoins de tous nos clients.
+                    </p>
                 </div>
 
                 <div class="div">
                     <h5>Liens importants</h5>
-                    <p>Accueil</p>
-                    <p>Service</p>
-                    <p>À propos</p>
-                    <p>Nous contacter</p>
+                    <a href="{{ path("app_home") }}">Accueil</a>
+                    <a href="{{ path("app_service") }}">Services</a>
+                    <a href="{{ path("app_about") }}">À propos</a>
+                    <a href="{{ path("app_contact") }}">Nous contacter</a>
                 </div>
 
                 <div class="div">
                     <h5>Services</h5>
                     <p>Création sur-mesure</p>
                     <p>Vente</p>
-                    <p>Publicité</p>
+                    <p>Expositions</p>
                 </div>
 
                 <div class="social-div">

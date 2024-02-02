@@ -22,23 +22,57 @@
     }
 
     .stats {
+        min-height: 10vh;
         margin-top: 6vh;
-        @include m.dflex($direction: row, $justify: space-between, $align: start);
+        @include m.dflex($direction: row, $justify: start, $align: stretch);
 
         &__item {
-            @include m.dflex($direction: row, $justify: start, $align: end);
-            width: 20%;
-            hr {
-                width: 5px;
-                height: 9vh;
-                border: none;
-                background-color: map-get($map: $colors, $key: 'info');
-                margin-right: 2vh;
-            }
+            position: relative;
+            min-height: 100%;
+            @include m.dflex($direction: column, $justify: center, $align: start);
+            min-width: 27%;
+
             h4 {
                 margin-bottom: 1vh;
             }
+
+            h4, p {
+                margin-left: 1.5rem;
+            }
+
+            &::before {
+                position: absolute;
+                content: '';
+                display: inline-block;
+                min-width: 5px;
+                background-color: map-get($map: $colors, $key: 'info');
+                height: 100%;
+                top: 0;
+                left: 0;
+            }
         }
 
+    }
+
+
+    @media (max-width: 1024px) {
+        .section-title {
+            text-align: center !important;
+        }
+
+        .container {
+            @include m.dflex($direction: column, $justify: start, $align: center);
+            
+            .section-title, .info {
+                @include m.dflex($direction: column, $justify: start, $align: center);
+                width: 100%;
+            }
+            
+        }
+
+        .stats {
+            width: 100%;
+            min-height: 8vh;
+        }
     }
 }

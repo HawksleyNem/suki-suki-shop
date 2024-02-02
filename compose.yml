@@ -1,0 +1,10 @@
+version: '3.8'
+services:
+  symfony:
+    build: .
+    # container_name: 'symfony_app'
+    restart: always
+    ports:
+      - "8080:80"
+    environment:
+      - APP_ENV=prod

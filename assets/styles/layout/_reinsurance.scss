@@ -22,4 +22,27 @@
             width: 6vh;
         }
     }
+
+
+    @media (max-width: 1024px) {
+        @include m.dflex($direction: column, $justify: start, $align: center);
+
+        .section-title {
+            text-align: center;
+        }
+
+        .reinsurance-list {
+            @include m.dflex($direction: column, $justify: start, $align: center);
+        }
+
+        &__card {
+            @include m.dflex($direction: column, $justify: start, $align: center);
+            width: 100%;
+            text-align: center;
+        }
+
+        &__card + &__card {
+            margin-top: 8vh;
+        }
+    }
 }

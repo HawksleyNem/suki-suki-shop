@@ -10,4 +10,20 @@
         }
     }
 
+    @media (max-width: 1024px) {
+        margin-bottom: 20vh;
+
+        .info {
+            @media (max-width: 1024px) {
+                width: 100%;
+                @include m.dflex($direction: column, $justify: start, $align: center);
+    
+                h1, p {
+                    width: 100%;
+                    text-align: center;
+                }
+            }
+        }
+    }
+
 }

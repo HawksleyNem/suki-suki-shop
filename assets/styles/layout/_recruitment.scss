@@ -1,0 +1,80 @@
+@use '../abstracts/variables' as *;
+@use '../abstracts/mixin' as m;
+
+.recruitment {
+    @include m.dflex($direction: row, $justify: center, $align: start);
+
+    .section-title {
+        width: 50%;
+        @include m.dflex($direction: column, $justify: start, $align: start);
+        text-align: start !important;
+    }
+
+    .recruitment-content {
+        width: 50%;
+        @include m.dflex($direction: row, $justify: start, $align: start);
+
+        .column + .column {
+            margin-left: 6vh;
+        }
+
+        .column-2 {
+            margin-top: 10vh;
+        }
+
+        .card {
+            padding: 6vh;
+            padding-bottom: 15vh;
+            h4 {
+                width: 40%;
+                margin-bottom: 2vh;
+            }
+        }
+
+        .card + .card {
+            margin-top: 6vh;
+        }
+
+        .card-1 {
+            background-color: rgba(map-get($map: $colors, $key: 'info'), 0.3);
+        }
+
+        .card-2 {
+            background-color: rgba(map-get($map: $colors, $key: 'info'), 0.15);
+        }
+    }
+
+
+    @media (max-width: 1024px) {
+        @include m.dflex($direction: column, $justify: start, $align: center);
+
+        .section-title {
+            width: 100%;
+            @include m.dflex($direction: column, $justify: start, $align: center);
+            
+            h3 {
+                text-align: center;
+            }
+        }
+
+        .recruitment-content {
+            width: 100%;
+            @include m.dflex($direction: column, $justify: start, $align: center);
+
+            .column {
+                margin: 0 !important;
+                margin-top: 6vh !important;
+
+                .card {
+                    @include m.dflex($direction: column, $justify: start, $align: center);
+                    text-align: center;
+                    padding: 6vh !important;
+
+                    h4 {
+                        width: 80%;
+                    }
+                }
+            }
+        }
+    }
+}

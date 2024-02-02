@@ -4,7 +4,7 @@
 
 {% block body %}
     <div class="about">
-        <div class="section-title">
+        <div class="section-title container">
             <h2>À propos</h2>
             <h3>Découvrez qui nous sommes et nos objectifs</h3>
         </div>
@@ -20,35 +20,72 @@
                     <p>Nos valeurs sont notre boussole, guidant chaque aspect de notre travail et de notre engagement envers l'excellence.</p>
                     <div class="stats">
                         <div class="stats__item">
-                            <hr>
-                            <div>
-                                <h4>25+</h4>
-                                <p>Ans d'expérience</p>
-                            </div>
+                            <h4>25+</h4>
+                            <p>Ans d'expérience</p>
                         </div>
                         <div class="stats__item">
-                            <hr>
-                            <div>
-                                <h4>30k+</h4>
-                                <p>Client satisfaits</p>
-                            </div>
+                            <h4>30k+</h4>
+                            <p>Client satisfaits</p>
                         </div>
                         <div class="stats__item">
-                            <hr>
-                            <div>
-                                <h4>9</h4>
-                                <p>Pays</p>
-                            </div>
+                            <h4>9</h4>
+                            <p>Pays</p>
                         </div>
                         <div class="stats__item">
-                            <hr>
-                            <div>
-                                <h4>120+</h4>
-                                <p>Employés</p>
-                            </div>
+                            <h4>120+</h4>
+                            <p>Employés</p>
                         </div>
                     </div>
                 </div>
+        </section>
+
+        <section class="recruitment container">
+            <div class="section-title">
+                <h2>Nous recrutons !</h2>
+                <h3>Opportunités brillantes pour une aventure palpitante</h3>
+                <div>
+                    <a href="{{ path("app_contact") }}" class="btn btn-primary">Nous contacter</a>
+                </div>
+            </div>
+
+            <div class="recruitment-content">
+                <div class="column">
+                    <div class ="card card-2">
+                        <h4>Community manager</h4>
+                        <p>
+                            Vous serez le lien vital entre notre marque et notre passionnante communauté manga.
+                            Cultivez l'engagement, créez des conversations significatives et façonnez une présence
+                            en ligne qui reflète notre dévouement envers nos fans.
+                        </p>
+                    </div>
+                    <div class ="card card-1">
+                        <h4>Graphic designer</h4>
+                        <p>
+                            Vous serez le créateur visuel derrière notre univers manga et animé,
+                            donnant vie à nos idées à travers des visuels captivants.
+                            Apportez votre talent artistique pour façonner notre esthétique distinctive.
+                        </p>
+                    </div>
+                </div>
+                <div class="column column-2">
+                    <div class ="card card-1">
+                        <h4>Agenceur d'espace</h4>
+                        <p>
+                            Vous sculpterez l'expérience immersive de nos expositions manga.
+                            Apportez votre flair artistique pour créer des environnements captivants
+                            et uniques, faisant de chaque exposition un voyage mémorable pour nos clients.
+                        </p>
+                    </div>
+                    <div class ="card card-2">
+                        <h4>Assistant directeur artistique</h4>
+                        <p>
+                            Vous collaborerez étroitement à la conception et à l'exécution de notre vision
+                            artistique. Apportez votre créativité exceptionnelle pour soutenir
+                            la direction artistique globale de Suki Suki Shop.
+                        </p>
+                    </div>
+                </div>
+            </div>
         </section>
     </div>
 {% endblock %}

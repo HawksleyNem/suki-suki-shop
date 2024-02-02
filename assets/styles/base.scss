@@ -2,16 +2,6 @@
 @use './abstracts/mixin' as m;
 
 @font-face {
-    font-family: 'Roboto Thin';
-    src: url("/fonts/Roboto-Thin.ttf");
-}
-
-@font-face {
-    font-family: 'Roboto Light';
-    src: url("/fonts/Roboto-Light.ttf");
-}
-
-@font-face {
     font-family: 'Roboto Regular';
     src: url("/fonts/Roboto-Regular.ttf");
 }
@@ -36,6 +26,10 @@ header {
     margin-bottom: 10vh;
 }
 
+.logo {
+    max-width: 8vh;
+}
+
 main {
     @include m.dflex($direction: column, $justify: start, $align: center);
     padding-top: 20vh;
@@ -46,40 +40,34 @@ section {
 }
 
 h1 {
-    font-family: 'Roboto Regular';
     font-size: 3.5rem;
     color: map-get($map: $colors, $key: 'primary');
     width: 50%;
 }
 
 h2 {
-    font-family: 'Roboto Regular';
     font-size: 1.2rem;
     color: map-get($map: $colors, $key: 'info')
 }
 
 h3 {
-    font-family: 'Roboto Regular';
     font-size: 3rem;
     color: map-get($map: $colors, $key: 'primary')
 }
 
 h4 {
-    font-family: 'Roboto Regular';
     font-size: 2rem;
     color: map-get($map: $colors, $key: 'primary');
 }
 
 h5 {
-    font-family: 'Roboto Regular';
-    font-size: 1rem;
+    font-size: 1.2rem;
     color: map-get($map: $colors, $key: 'white');
     text-transform: uppercase;
     margin-bottom: 3vh;
 }
 
 p, a {
-    font-family: 'Roboto Regular';
     font-size: 1.2rem;
     color: map-get($map: $colors, $key: 'gray');
 }
@@ -97,6 +85,10 @@ p + p {
     h2 {
         margin-bottom: 2vh;
     }
+
+    div {
+        padding-top: 4vh;
+    }
 }
 
 .banner {
@@ -107,6 +99,10 @@ p + p {
     width: 55vw;
     object-fit: cover;
     border-radius: 40% 60% 51% 49% / 60% 0% 0% 40%;
+
+    @media (max-width: 1024px) {
+        display: none;
+    }
 }
 
 .highlight {
