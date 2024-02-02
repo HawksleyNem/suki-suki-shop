@@ -12,8 +12,8 @@
         {% endblock %}
     </head>
     <body>
-        {# <header>
-            <div class="close-burger">
+        <header>
+            {# <div class="close-burger">
                 <div class="close-burger__item"></div>
                 <div class="close-burger__item"></div>
             </div> #}
@@ -35,26 +35,34 @@
             <div class="mobile-nav">
                 <nav class=" container">
                     <ul class="nav-left">
-                        <div class="burger-menu">
-                            <div class="burger-menu__item"></div>
-                            <div class="burger-menu__item mid"></div>
-                            <div class="burger-menu__item"></div>
-                        </div>
+                        <li>
+                            <div class="burger-menu">
+                                <div class="burger-menu__item"></div>
+                                <div class="burger-menu__item mid-bar"></div>
+                                <div class="burger-menu__item"></div>
+                            </div>
+                        </li>
                     </ul>
                     <ul class="nav-right">
-                        <a href="{{ path("app_home") }}"><img src={{ asset("/images/SSShopLogo.png") }} alt="Logo" class="logo"></a>
+                        <li><a href="{{ path("app_home") }}"><img src={{ asset("/images/SSShopLogo.png") }} alt="Logo" class="logo"></a></li>
                     </ul>
                 </nav>
-
             </div>
-            {# <div class="mobile-menu">
-                <ul>
-                    <li><a href="{{ path("app_home") }}">Accueil</a></li>
-                    <li><a href="{{ path("app_service") }}">Services</a></li>
-                    <li><a href="{{ path("app_about") }}">À propos</a></li>
-                    <li><a href="{{ path("app_contact") }}" class="btn btn-primary">Nous contacter</a></li>
-                </ul>
-            </div> #}
+
+            <div class="mobile-menu">
+                <div class="close-menu">
+                    <div class="close-menu__item close-1"></div>
+                    <div class="close-menu__item close-2"></div>
+                </div>
+                <nav>
+                    <ul>
+                        <li><a href="{{ path("app_home") }}">Accueil</a></li>
+                        <li><a href="{{ path("app_service") }}">Services</a></li>
+                        <li><a href="{{ path("app_about") }}">À propos</a></li>
+                        <li><a href="{{ path("app_contact") }}" class="btn btn-primary">Nous contacter</a></li>
+                    </ul>
+                </nav>
+            </div>
         </header>
 
         <main>
