@@ -16,13 +16,13 @@
         input {
             border: none;
             border-bottom: 2px solid rgba(map-get($map: $colors, $key: 'black'), 0.3);
-            font-size: 1.2rem;
+            font-size: 1rem;
             font-family: 'Roboto Regular';
             padding-block: 2vh;
             transition: 0.4s;
 
             ::placeholder {
-                font-size: 1.2rem;
+                font-size: 1rem;
                 font-family: 'Roboto Regular';
               }
 
