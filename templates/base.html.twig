@@ -3,7 +3,7 @@
     <head>
         <meta charset="UTF-8">
         <title>{% block title %}SSShop | {% endblock %}</title>
-        <link rel="icon" href="/images/SSShopLogo.png">
+        <link rel="icon" href="{{ asset('images/SSShopLogo.png') }}">
         {% block stylesheets %}
         {% endblock %}
 
@@ -21,7 +21,7 @@
 
             <div class="desktop-nav">
                 <nav class=" container">
-                    <ul class="nav-left"><a href="{{ path("app_home") }}"><img src={{ asset("/images/SSShopLogo.png") }} alt="Logo" class="logo"></a></ul>
+                    <ul class="nav-left"><a href="{{ path("app_home") }}"><img src="{{ asset("/images/SSShopLogo.png") }}" alt="Logo" class="logo"></a></ul>
                     <ul class="nav-right">
                         <li><a href="{{ path("app_home") }}">Accueil</a></li>
                         <li><a href="{{ path("app_service") }}">Services</a></li>
@@ -72,7 +72,7 @@
         <footer>
             <div class="container footer-content">
                 <div div class="main-div">
-                    <a href=""><img src={{ asset("/images/SSShopLogo.png") }} alt="Logo" class="logo"></a>
+                    <a href=""><img src="{{ asset("/images/SSShopLogo.png") }}" alt="Logo" class="logo"></a>
                     <p>
                         Chez Suki Suki Shop, notre objectif principal est de vous offrir une qualité de produit inégalable
                         ainsi que des moments inoubliables lors de nos expositions. Après avoir débuté en France
@@ -99,11 +99,11 @@
                 <div class="social-div">
                     <h5>Nous contacter</h5>
                     <div class="social-div__item">
-                        <img src="/images/location-svgrepo-com 1.png" alt="Localisation" class="icon">
+                        <img src="{{ asset('images/location-svgrepo-com 1.png') }}" alt="Localisation" class="icon">
                         <p>70 rue des Jacobins, Amiens 80800</p>
                     </div>
                     <div class="social-div__item">
-                        <img src="/images/phone-svgrepo-com 1.png" alt="Téléphone" class="icon">
+                        <img src="{{ asset('images/phone-svgrepo-com 1.png') }}" alt="Téléphone" class="icon">
                         <p>03 22 77 77 77</p>
                     </div>
                     <div class="social-div__item">
